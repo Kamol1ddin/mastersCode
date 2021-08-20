@@ -1,5 +1,5 @@
 *{
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     text-decoration: none;
     list-style: none;
@@ -23,39 +23,49 @@ header{
 }
 nav{
     width: 100%;
-    height: 10vh;
+    height: 9vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 300;
+    position: fixed;
+}
+.nav-position{
+    position: fixed;
+    background-color: #81e0fd;
 }
 .nav-brand{
-    display: flex;  
+    width: 450px;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
     margin: 10px;
-    z-index: 300;
+    z-index: 350;
 }
 .nav-brand img{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 350;
 }
 .nav-brand a{
     font-size: 21px;
     color: #81e0fd;
-    padding: 10px;
     letter-spacing: 10px;
     font-weight: normal;
-    z-index: 300;
+    z-index: 350;
 }
 .nav-ul{
-    width: 450px;
+    width: 530px;
     display: flex;
     justify-content: space-around;
-    margin: 20px;
+    margin: 30px 60px;
+    z-index: 350;
 }
 .nav-ul li a{
-    color: #27728b;
+    color: #7ba6b6c2;
     transition: all .3s;
-    z-index: 300;
+    z-index: 350;
+    font-size: 20px;
 }
 .nav-ul li a:hover{
     color: #81e0fd;
@@ -65,24 +75,26 @@ nav{
     width: 940px;
     height: 400px;
     position: absolute;
-    top: 200px;
-    left: 150px;
+    top: 240px;
+    left: 170px;
     padding: 10px;
 }
 .header-item h1{
-    font-size: 60px;
+    font-size: 63px;
+    font-weight: 400;
     color: #81e0fd;
     letter-spacing: 10px;
 }
 .header-buttons{
-    width: 500px;
-    height: 70px;
+    width: 570px;
+    height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .header-buttons a{
-    font-size: 20px;
+    font-size: 23px;
+    padding: 3px 20px;
     color:#81e0fd;
     display: flex;
     justify-content: center;
@@ -90,20 +102,204 @@ nav{
     border-radius: 50px;
 }
 .header-free-courses{
-    width: 235px;
+    width: 250px;
     height: 50px;
     background: #0a21ed;
     color: #fff;
 }
+.header-courses-free{
+    animation: free-courses 1s normal;
+    transition: all .2s;
+}
+@keyframes free-courses{
+    0% {
+        transition: all .001s;
+        transform: translateX(-5px);
+    }
+    10% {
+        transition: all .001s;
+        transform: translateX(-10px);
+    }
+    20% {
+        transition: all .001s;
+        transform: translateX(10px);
+    }
+    30% {
+        transition: all .001s;
+        transform: translateX(-15px);
+    }
+    40% {
+        transition: all .001s;
+        transform: translateX(15px);
+    }
+    50% {
+        transition: all .001s;
+        transform: translateX(-20px);
+    }
+    60% {
+        transition: all .001s;
+        transform: translateX(20px);
+    }
+    70% {
+        transition: all .001s;
+        transform: translateX(-10px);
+    }
+    80% {
+        transition: all .001s;
+        transform: translateX(10px);
+    }
+    90% {
+        transition: all .001s;
+        transform: translateX(-5px);
+    }
+    100% {
+        transition: all .001s;
+        transform: translateX(0px);
+    }
+}
 .read-more{
-    width: 210px;
-    height: 50px;
+    width: 220px;
+    height: 48px;
     border:1px solid #81e0fd;
-    transition: all .3s;
+    transition: all .2s;
 }
 .read-more:hover{
     background-color: #081abc;
-    color: #fff;
     border: 1px solid #0818ad;
+    transition: all .3s;
+}
+#course-description{
+    width: 100vw;
+    height: 670px;
+}
+.description-title{
+    margin-top: 100px;
+}
+.h1{
+    text-align: center;
+    opacity: .65;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.hr{
+    width: 150px;
+    height: 2px;
+    background: #81e0fd;
+    margin: 0 auto;
+}
+.description-title p{
+    text-align: center;
+    opacity: .7;
+    font-size: 20px;
+    word-spacing: 2px;
+}
+.description-item-block{
+    height: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.description-item{
+    width: 355px;
+    height: 180px;
+}
+.description-image-box{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.description-image-block{
+    width: 100%;
+    display: flex;
+}
+.description-image-div{
+    width: 475px;
+    height: 320px;
+    overflow: hidden;
+}
+.description-images{
+    width: 475px;
+    height: 320px;
+    transition: all .8s;
+    transform: scale(1.2);
+}
+.description-images:hover{
+    transform: scale(1);
+    transition: all .8s;
+}
+#courses-section{
+    margin-top: 650px;
+}
+.courses-sale-block{
+    width: 100vw;
+    height: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -150px;
+}
+.courses-sale-block:nth-of-type(1){
     transition: all .5s;
+    transform: translateX(-200%);
+}
+.courses-sale-block:nth-of-type(2){
+    transition: all .5s;
+    transform: translateX(200%);
+}
+.courses-sale-block:nth-of-type(3){
+    transition: all .5s;
+    transform: translateX(-200%);
+}
+.courses-sale-block:nth-of-type(4){
+    transition: all .5s;
+    transform: translateX(200%);
+}
+.courses-sale-block:nth-of-type(5){
+    transition: all .5s;
+    transform: translateX(-200%);
+}
+.courses-sale{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.courses-sale img{
+    width: 520px;
+    height: 280px;
+}
+.courses-sale p:nth-of-type(1){
+    opacity: .6;
+    text-align: center;
+    width: 490px;
+    font-size: 21px;
+}
+.courses-sale p:nth-of-type(2){
+    font-size: 35px;
+    font-weight: bolder;
+    opacity: .7;
+}
+.line{
+    text-decoration: line-through;
+}
+.courses-sale a{
+    width: 200px;
+    height: 45px;
+    color:#0818ad;
+    transition: all .2s;
+    font-size: 23px;
+    padding: 0 10px;
+    background-color:#81e0fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+.courses-sale a:hover{
+    background-color: #081abc;
+    color: #81e0fd;
+    transition: all .3s;
 }
