@@ -30,7 +30,7 @@ window.addEventListener('scroll', () =>{
         nav.style.background = '#81e0fd'
         masters.style.color = '#7ba6b6c2'
         anchors.forEach(item =>{
-            item.addEventListener('click', () =>{
+            item.addEventListener('mouseover', () =>{
                 item.style.borderBottom = '2px solid #0a21ed'
             })
         })
