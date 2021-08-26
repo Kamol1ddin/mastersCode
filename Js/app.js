@@ -29,8 +29,10 @@ window.addEventListener('scroll', () =>{
         nav.style.position = 'fixed'
         nav.style.background = '#81e0fd'
         masters.style.color = '#7ba6b6c2'
-        anchors.addEventListener('mouseover', () =>{
-            anchors.style.borderBottom = '2px solid #0a21ed'
+        anchors.forEach(item =>{
+            item.addEventListener('click', () =>{
+                item.style.borderBottom = '2px solid #0a21ed'
+            })
         })
     }else{
         nav.style.position = 'relative'
