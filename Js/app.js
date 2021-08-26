@@ -33,6 +33,9 @@ window.addEventListener('scroll', () =>{
             item.addEventListener('mouseover', () =>{
                 item.style.borderBottom = '2px solid #0a21ed'
             })
+            item.addEventListener('mouseleave', () =>{
+                item.style.borderBottom = 'none'
+            })
         })
     }else{
         nav.style.position = 'relative'
